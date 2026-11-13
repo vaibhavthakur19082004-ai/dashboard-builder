@@ -1,0 +1,30 @@
+* { box-sizing: border-box; }
+body { margin: 0; font-family: system-ui, sans-serif; background: #f4f5f9; color: #1f2937; }
+button, select, input { font: inherit; padding: 8px 12px; border-radius: 8px; border: 1px solid #d1d5db; background: #fff; cursor: pointer; }
+input { cursor: text; }
+button.primary { background: #4f46e5; color: #fff; border-color: #4f46e5; }
+button.primary:disabled { opacity: .5; cursor: not-allowed; }
+button.danger, .danger { color: #b91c1c; }
+button.link { border: 0; background: none; color: #4f46e5; padding: 4px; }
+.muted { color: #6b7280; font-size: 14px; }
+.error { background: #fee2e2; color: #991b1b; padding: 8px 12px; border-radius: 8px; margin: 8px 0; }
+.card { background: #fff; border-radius: 12px; padding: 24px; box-shadow: 0 2px 8px rgba(0,0,0,.08); display: flex; flex-direction: column; gap: 12px; }
+.auth { min-height: 100vh; display: grid; place-items: center; }
+.auth .card { width: 340px; }
+.layout { display: grid; grid-template-columns: 240px 1fr; min-height: 100vh; }
+aside { background: #fff; padding: 16px; display: flex; flex-direction: column; gap: 8px; border-right: 1px solid #e5e7eb; }
+.spacer { flex: 1; }
+.nav { text-align: left; } .nav.active { background: #eef2ff; border-color: #4f46e5; }
+main { padding: 24px; }
+.toolbar { display: flex; justify-content: space-between; align-items: center; } .toolbar button { margin-left: 8px; }
+.palette { display: flex; gap: 12px; align-items: center; margin: 12px 0; }
+.chip { padding: 8px 14px; background: #fff; border: 1px dashed #4f46e5; border-radius: 999px; cursor: grab; }
+.canvas { display: grid; grid-template-columns: repeat(auto-fill, minmax(340px, 1fr)); gap: 16px; min-height: 280px; padding: 16px; border: 2px dashed #c7d2fe; border-radius: 12px; }
+.widget { background: #fff; border-radius: 12px; padding: 16px; box-shadow: 0 2px 8px rgba(0,0,0,.06); }
+.widget-head { display: flex; justify-content: space-between; margin-bottom: 8px; }
+.kpi { font-size: 48px; font-weight: 700; color: #4f46e5; padding: 40px 0; text-align: center; }
+.modal { position: fixed; inset: 0; background: rgba(0,0,0,.4); display: grid; place-items: center; padding: 16px; overflow: auto; }
+.builder { width: min(640px, 100%); }
+.row { display: flex; gap: 12px; flex-wrap: wrap; align-items: end; } .row label { display: flex; flex-direction: column; gap: 4px; font-size: 13px; } .row.end { justify-content: flex-end; }
+.preview { min-height: 220px; }
+@media (max-width: 720px) { .layout { grid-template-columns: 1fr; } aside { border-right: 0; border-bottom: 1px solid #e5e7eb; } }

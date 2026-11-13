@@ -1,0 +1,25 @@
+spring:
+  application:
+    name: dashboard-builder
+  datasource:
+    url: jdbc:h2:mem:dashboard;DB_CLOSE_DELAY=-1
+    username: sa
+    password:
+  jpa:
+    hibernate:
+      ddl-auto: update
+    open-in-view: false
+  cache:
+    type: caffeine
+    cache-names: metrics
+    caffeine:
+      spec: maximumSize=1000,expireAfterWrite=5m
+
+app:
+  jwt:
+    secret: ${JWT_SECRET:change-me-please-use-a-long-random-secret-key-0123456789}
+    expiration-minutes: 120
+
+springdoc:
+  swagger-ui:
+    path: /swagger-ui.html
